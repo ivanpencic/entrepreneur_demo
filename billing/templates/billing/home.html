@@ -1,0 +1,20 @@
+{% extends "billing/base.html" %}
+
+{% block content %}
+
+
+<div id="content">
+
+{% if user.is_authenticated %}
+	<div class='text-center'>
+	{% for action in content_links %}
+		<b>{% include "billing/components/basic_action.html" with action=action %}</b>
+	{% endfor %}
+	</div>
+
+{% else %}
+	{% include "billing/components/unauthorised_content.html" %}
+{% endif %}
+
+</div>
+ {% endblock %}

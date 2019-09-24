@@ -1,0 +1,67 @@
+
+<div class='text-center'>
+
+	<div class="row">
+		{% for group in grid_data.actions.1 %}
+			<div class="col-sm-2" style='padding-left: 30px; padding-right:30px;'>
+				<b>{{group}}</b><br><br>
+				{% for action in grid_data.actions.0 %}
+					{% if action.url.5 == group %}
+						{% include "billing/components/basic_action.html" with action=action %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<br>
+
+
+
+
+
+
+<div class='text-center'>
+	<table id="{{grid_data.name}}"></table>
+
+	<script type="text/javascript">
+
+		var mydata = [
+				{% for row in grid_data.rows %}
+				   {
+					{% for cell in row %}
+						{{forloop.counter0}} : "{{cell}}",
+					{% endfor %}
+					},
+				{% endfor %}
+
+		];
+
+		var headers = [
+			{% for head in grid_data.headers %}
+				{ label: '{{head}}', name: '{{forloop.counter0}}', width: 75},
+			{% endfor %}
+		 ]
+
+		$(document).ready(function () {
+			$("#{{grid_data.name}}").jqGrid({
+				datatype: "local",
+				data: mydata,
+				height: 250,
+				<!-- width: 780, -->
+				autowidth: true,
+				colModel: headers,
+				viewrecords: true, // show the current page, data rang and total records on the toolbar
+				caption: "{{grid_data.name}}",
+			});
+		});
+
+		$(window).on("resize", function () {
+			var $grid = $("#{{grid_data.name}}"),
+				newWidth = $grid.closest(".ui-jqgrid").parent().width();
+			$grid.jqGrid("setGridWidth", newWidth, true);
+		});
+
+
+	</script>
+</div>

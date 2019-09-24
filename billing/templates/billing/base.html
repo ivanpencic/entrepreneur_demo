@@ -1,0 +1,83 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Company v{{app_version}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href='{% static "billing/img/logo/logo_icon.ico"%}' type="image/png">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href='{% static "billing/libs/jqGrid/ui.jqgrid.css"%}' />
+	<script type="text/ecmascript" src='{% static "billing/libs/jqGrid/jquery.jqGrid.min.js"%}'></script>
+
+	<link rel="stylesheet" type="text/css" media="screen" href='{% static "billing/css/core.css"%}' />
+	<script type="text/ecmascript" src='{% static "billing/js/core.js"%}'></script>
+
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+</head>
+
+<body>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-1'></div>
+			<div class='col-10 shadow'>
+				<div class='row'>
+					<div class='col-12'>
+						{% include "billing/components/standard_horisontal_links.html" with links=top_links%}
+						<br>
+						<br>
+						<br>
+						{% block content %}{% endblock %}
+
+
+            {% for message in messages %}
+              <!-- Modal -->
+              <div class="modal fade" id='{{forloop.counter0}}' role="dialog">
+                <div class="modal-dialog">
+
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">{{message.tags|title}}</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                              {{ message }}
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              {% endfor %}
+
+            {% for message in messages %}
+              <script>
+              $(document).ready(function(){
+
+                $('#' + '{{forloop.counter0}}').modal();
+
+              });
+              </script>
+            {% endfor %}
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

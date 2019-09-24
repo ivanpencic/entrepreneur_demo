@@ -1,0 +1,6 @@
+{% if action.type == 'a_tag' %}
+	<a class="navbar-brand" href="{{action.url}}">{{action.name|safe}}</a>
+{% elif action.type == 'js_function_link' %}
+	<a href="javascript:gridActionBySelectedId('{{action.url.0|safe}}', '{{action.url.1|safe}}', '{{action.url.2|safe}}',
+	'{{action.url.3|safe}}', '{{action.url.4|safe}}')">{{action.name|safe}}</a>
+{% endif %}

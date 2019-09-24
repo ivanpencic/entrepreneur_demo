@@ -1,0 +1,4 @@
+#buildpack needed for wkhtml to pdf (ubuntu package)
+heroku buildpacks:add https://github.com.simplefractal/heroku-buildpack-wkhtmltopdf.git
+
+#procfile is need for heroku to start app

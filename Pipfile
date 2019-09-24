@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[packages]
+pdfkit = "*"
+django = "==2.2.3"
+crypto = "*"
+cryptography = "*"
+pycrypto = "*"
+whitenoise = "*"
+gunicorn = "*"
+xlsxwriter = "*"
+wkhtmltopdf = "*"
+cffi = "==1.11.5"
+mysqlclient = "*"
+
+[requires]

@@ -1,0 +1,104 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_002{font-family:"Verdana Bold",serif;font-size:9.8px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_002{font-family:"Verdana Bold",serif;font-size:9.8px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_003{font-family:"Verdana",serif;font-size:8.3px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_003{font-family:"Verdana",serif;font-size:8.3px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_004{font-family:Arial,serif;font-size:14.3px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_004{font-family:Arial,serif;font-size:14.3px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_005{font-family:"Verdana Bold",serif;font-size:8.3px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_005{font-family:"Verdana Bold",serif;font-size:8.3px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_006{font-family:"Verdana Bold Italic",serif;font-size:9.8px;color:rgb(0,0,0);font-weight:bold;font-style:italic;text-decoration: none}
+div.cls_006{font-family:"Verdana Bold Italic",serif;font-size:9.8px;color:rgb(0,0,0);font-weight:bold;font-style:italic;text-decoration: none}
+span.cls_007{font-family:"Verdana Italic",serif;font-size:9.8px;color:rgb(0,0,0);font-weight:normal;font-style:italic;text-decoration: none}
+div.cls_007{font-family:"Verdana Italic",serif;font-size:9.8px;color:rgb(0,0,0);font-weight:normal;font-style:italic;text-decoration: none}
+span.cls_008{font-family:Arial,serif;font-size:8.3px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_008{font-family:Arial,serif;font-size:8.3px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_011{font-family:"Verdana",serif;font-size:9.8px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_011{font-family:"Verdana",serif;font-size:9.8px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+-->
+</style>
+</head>
+<body>
+
+<div style="position:absolute;left:50%;margin-left:-306px;top:0px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="{{ background_src }}" width=612 height=792></div>
+<div style="position:absolute;left:58.56px;top:54.82px" class="cls_002"><span class="cls_002">Komitent:</span></div>
+<div style="position:absolute;left:58.56px;top:66.76px" class="cls_003"><span class="cls_003">{{comitent_pt_1}}</span></div>
+<div style="position:absolute;left:58.56px;top:76.48px" class="cls_003"><span class="cls_003">{{comitent_pt_2}}</span></div>
+<div style="position:absolute;left:55.56px;top:112.48px" class="cls_004"><span class="cls_004">OBAVEŠTENJE O PRILIVU IZ INOSTRANSTVA</span></div>
+<div style="position:absolute;left:57.00px;top:132.04px" class="cls_003"><span class="cls_003">{{bank_payment_id}}</span></div>
+<div style="position:absolute;left:373.56px;top:132.04px" class="cls_003"><span class="cls_003">Datum: </span></div>
+<div style="position:absolute;left:410px;top:132.04px" class="cls_003"><span class="cls_003">{{date_of_payment}}</span></div>
+<div style="position:absolute;left:57.72px;top:146.32px" class="cls_003"><span class="cls_003">Obaveštavamo Vas da smo primili izveštaj o naplati iz inostranstva u iznosu od:</span></div>
+<div style="position:absolute;left:433.56px;top:146.32px" class="cls_003"><span class="cls_003">{{invoice_total_in_origin_currency}}</span></div>
+<div style="position:absolute;left:57.72px;top:160.48px" class="cls_003"><span class="cls_003">sa valutom:</span></div>
+<div style="position:absolute;left:110px;top:160.48px" class="cls_003"><span class="cls_003">{{currency_date}}</span></div>
+<div style="position:absolute;left:107.28px;top:174.76px" class="cls_003"><span class="cls_003">{{payer_pt_1}}</span></div>
+<div style="position:absolute;left:333.00px;top:174.76px" class="cls_003"><span class="cls_003">po</span></div>
+<div style="position:absolute;left:57.72px;top:179.32px" class="cls_003"><span class="cls_003">po nalogu:</span></div>
+<div style="position:absolute;left:383.28px;top:179.32px" class="cls_003"><span class="cls_003">{{reference}}</span></div>
+<div style="position:absolute;left:107.28px;top:184.48px" class="cls_003"><span class="cls_003">{{payer_pt_2}}</span></div>
+<div style="position:absolute;left:333.00px;top:184.48px" class="cls_003"><span class="cls_003">osnovu:</span></div>
+<div style="position:absolute;left:57.72px;top:198.76px" class="cls_003"><span class="cls_003">trošak ino banke:</span></div>
+<div style="position:absolute;left:157.56px;top:198.76px" class="cls_003"><span class="cls_003">0.00 EUR</span></div>
+<div style="position:absolute;left:57.72px;top:216.76px" class="cls_003"><span class="cls_003">Molimo Vas, da nam u skladu sa Odlukom o uslovima i načinu obavljanja platnog prometa sa inostranstvom i</span></div>
+<div style="position:absolute;left:57.72px;top:226.48px" class="cls_003"><span class="cls_003">Uputstvom za sprovođenje odluke o uslovima i načinu obavljanja platnog prometa sa inostranstvom («Sl.Glasnik RS»</span></div>
+<div style="position:absolute;left:57.72px;top:236.32px" class="cls_003"><span class="cls_003">br. 24/2007), dostavite podatke za statistiku i raspored priliva, popunjavajući obrasce na kraju ovog obaveštenja, na</span></div>
+<div style="position:absolute;left:57.72px;top:246.04px" class="cls_003"><span class="cls_003">faks broj: 021/4876976, kako bismo mogli da izvršimo knjiženje i raspored priliva.</span></div>
+<div style="position:absolute;left:57.72px;top:267.76px" class="cls_003"><span class="cls_003">Zadužujemo Vas po osnovu:</span></div>
+<div style="position:absolute;left:57.72px;top:282.04px" class="cls_003"><span class="cls_003">Provizija druge banke:</span></div>
+<div style="position:absolute;left:258.72px;top:282.04px" class="cls_003"><span class="cls_003">dinara sa pozivom na broj</span></div>
+<div style="position:absolute;left:408.72px;top:282.04px" class="cls_003"><span class="cls_003">50511 -</span></div>
+<div style="position:absolute;left:233.28px;top:296.32px" class="cls_003"><span class="cls_003">Oslobođeno PDV prema el. 25 st. 1. Zakona o porezu na dodatu vrednost</span></div>
+<div style="position:absolute;left:57.72px;top:300.76px" class="cls_003"><span class="cls_003">Poreza 0%:</span></div>
+<div style="position:absolute;left:233.28px;top:306.04px" class="cls_003"><span class="cls_003">(Sl. glasnik RS 84/04 i 86/04)</span></div>
+<div style="position:absolute;left:57.72px;top:320.32px" class="cls_003"><span class="cls_003">Ukupno:</span></div>
+<div style="position:absolute;left:258.72px;top:320.32px" class="cls_003"><span class="cls_003">dinara</span></div>
+<div style="position:absolute;left:57.72px;top:338.32px" class="cls_003"><span class="cls_003">Navedeni iznos ćemo naplatiti zaduženjem Vašeg tekućeg računa (dinarskog ili deviznog) kod Credit Agricole Srbija</span></div>
+<div style="position:absolute;left:57.72px;top:348.04px" class="cls_003"><span class="cls_003">a.d. Novi Sad.</span></div>
+<div style="position:absolute;left:57.72px;top:357.76px" class="cls_003"><span class="cls_003">Ukoliko nemate otvoren račun kod nas, uplatu navedenog iznosa troškova obrade priliva izvršite na račun broj:</span></div>
+<div style="position:absolute;left:57.72px;top:367.48px" class="cls_005"><span class="cls_005">330000000000010080</span></div>
+<div style="position:absolute;left:57.72px;top:381.76px" class="cls_003"><span class="cls_003">Komitent je saglasan sa svim odredbama ovog obaveštenja i u cilju prihvatanja potpisuje potpisom lica koja su</span></div>
+<div style="position:absolute;left:57.72px;top:391.48px" class="cls_003"><span class="cls_003">deponovala potpise na kartonu deponovanih potpisa kod Banke.</span></div>
+<div style="position:absolute;left:55.56px;top:403.48px" class="cls_005"><span class="cls_005">Ovo obaveštenje je izrađeno kompjuterski i važeće je bez pečata i potpisa</span></div>
+<div style="position:absolute;left:57.72px;top:422.98px" class="cls_006"><span class="cls_006">PODACI ZA STATISTIKU</span><span class="cls_007"> (opis svih transakcija koje su povezane sa plaćanjem)</span></div>
+
+<div style="position:absolute;left:67.28px;top:472px" class="cls_008"><span class="cls_008">{{invoice_order_number}}</span></div>
+<div style="position:absolute;left:110.28px;top:472px" class="cls_008"><span class="cls_008">{{payment_reference_code}}</span></div>
+<div style="position:absolute;left:280px;top:472px" class="cls_008"><span class="cls_008">{{payment_reference_description}}</span></div>
+<div style="position:absolute;left:450px;top:472px" class="cls_008"><span class="cls_008">{{invoice_total_in_origin_currency}}</span></div>
+
+<div style="position:absolute;left:62.28px;top:443.32px" class="cls_008"><span class="cls_008">Red.</span></div>
+<div style="position:absolute;left:146.28px;top:443.32px" class="cls_008"><span class="cls_008">Br. ugov. iz</span></div>
+<div style="position:absolute;left:208.56px;top:443.32px" class="cls_008"><span class="cls_008">God. iz</span></div>
+<div style="position:absolute;left:90.00px;top:448.48px" class="cls_008"><span class="cls_008">Šifra osnova</span></div>
+<div style="position:absolute;left:298.56px;top:448.48px" class="cls_008"><span class="cls_008">Opis transakcije</span></div>
+<div style="position:absolute;left:438.00px;top:448.48px" class="cls_008"><span class="cls_008">Iznos bruto obaveze (+)</span></div>
+<div style="position:absolute;left:63.72px;top:453.76px" class="cls_008"><span class="cls_008">broj</span></div>
+<div style="position:absolute;left:156.00px;top:453.76px" class="cls_008"><span class="cls_008">kontrl.</span></div>
+<div style="position:absolute;left:207.72px;top:453.76px" class="cls_008"><span class="cls_008">kontrol.</span></div>
+<div style="position:absolute;left:429.00px;top:459.04px" class="cls_008"><span class="cls_008">Iznos smanjenja plaaanja (-)</span></div>
+<div style="position:absolute;left:342.72px;top:535.48px" class="cls_008"><span class="cls_008">Neto iznos u valuti plaćanja:</span></div>
+<div style="position:absolute;left:57.72px;top:550.48px" class="cls_008"><span class="cls_008">Reg.broj kredita:</span></div>
+<div style="position:absolute;left:207.72px;top:550.48px" class="cls_008"><span class="cls_008">Godina kredita:</span></div>
+<div style="position:absolute;left:383.28px;top:550.48px" class="cls_008"><span class="cls_008">Posebna oznaka:</span></div>
+<div style="position:absolute;left:57.72px;top:569.26px" class="cls_006"><span class="cls_006">RASPORED PRILIVA</span><span class="cls_007"> (raspored priliva na krajnje korisnike)</span></div>
+<div style="position:absolute;left:60.00px;top:585.76px" class="cls_008"><span class="cls_008">R. br.</span></div>
+<div style="position:absolute;left:122.28px;top:585.76px" class="cls_008"><span class="cls_008">Iznos</span></div>
+<div style="position:absolute;left:228.00px;top:585.76px" class="cls_008"><span class="cls_008">U korist</span></div>
+<div style="position:absolute;left:345.72px;top:585.76px" class="cls_008"><span class="cls_008">Broj računa</span></div>
+<div style="position:absolute;left:472.56px;top:585.76px" class="cls_008"><span class="cls_008">Kod banke</span></div>
+<div style="position:absolute;left:357.00px;top:665.98px" class="cls_006"><span class="cls_006">Potpis komitenta:</span></div>
+<div style="position:absolute;left:60.00px;top:682.54px" class="cls_011"><span class="cls_011">U ______________</span></div>
+<div style="position:absolute;left:75.00px;top:682.54px" class="cls_011"><span class="cls_011">{{signature_city}}</span></div>
+<div style="position:absolute;left:157.20px;top:682.54px" class="cls_011"><span class="cls_011">, dana __________________</span></div>
+<div style="position:absolute;left:195px;top:682.54px" class="cls_011"><span class="cls_011">{{signature_date}}</span></div>
+<div style="position:absolute;left:460px;top:665px;" class="cls_011"><img src="{{ signature_url }}" width=90 height=30></div>
+</div>
+
+</body>
+</html>
