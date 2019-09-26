@@ -7,7 +7,7 @@
 	{% for head in about %}
 		<h4><p><b>{{head.0}}</b></p></h4>
 		{% for line in head.1 %}
-			<p>{{line}}</p>
+			<p>{{line|safe}}</p>
 		{% endfor %}
 	{% endfor %}
 		

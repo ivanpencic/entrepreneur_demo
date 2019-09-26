@@ -34,7 +34,8 @@ def get_about():
 		]
 		],
 		['#Demo DB preview', [
-			"- Example default database is sqlite demo.db filled with all required data for demo puropose. Demo login is u:admin p:8888 (heroku resets this DB file periodicly)",
+			"- Example default database is sqlite demo.db filled with all required data for demo puropose.",
+			"- Demo is hosted on Heroku at  <a href='http://d-company.herokuapp.com'>http://d-company.herokuapp.com</a> login is u:admin p:8888 (heroku resets this DB file periodicly)",
 		]
 		],
 		['#Blanc DB setup', [

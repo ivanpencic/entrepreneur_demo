@@ -17,5 +17,6 @@ xlsxwriter = "*"
 wkhtmltopdf = "*"
 cffi = "==1.11.5"
 mysqlclient = "*"
+weasyprint = "*"
 
 [requires]

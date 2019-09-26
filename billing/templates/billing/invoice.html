@@ -5,14 +5,20 @@
     <title>Invoice</title>
     
     <style>
+    @page {
+        margin: 1cm;
+        size: a4;
+    }
+
     .invoice-box {
         max-width: 1024px;
+        position: relative;
         margin: auto;
         padding: 30px;
         border: 1px solid #eee;
         box-shadow: 0 0 10px rgba(0, 0, 0, .15);
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 11px;
+        line-height: 18px;
         font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
         color: #555;
     }
@@ -35,13 +41,7 @@
     .invoice-box table tr.top table td {
         padding-bottom: 20px;
     }
-    
-    .invoice-box table tr.top table td.title {
-        font-size: 45px;
-        line-height: 45px;
-        color: #333;
-    }
-    
+        
     .invoice-box table tr.information table td {
         padding-bottom: 40px;
     }

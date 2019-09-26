@@ -8,6 +8,8 @@ import os
 import base64
 import billing.mail_sender as mail_sender
 import pdfkit
+from weasyprint import HTML, CSS
+from weasyprint.fonts import FontConfiguration
 
 from Crypto.Cipher import AES
 from Crypto import Random
@@ -83,14 +85,26 @@ def add_months_to_date(datetime_obj, months_to_add):
 	return datetime_obj
 
 
-class PDF(object):
+class WeasyPrint(object):
+	memory_file = None
+	error = None
+
+	def __init__(self, html, output, print_options=None):
+		obj = HTML(base_url=settings.BASE_DIR, string=html)
+		if output:
+			obj.write_pdf(output, zoom=0.6)
+		else:
+			self.memory_file = obj.write_pdf()
+
+
+class Wkhtml(object):
 	default_print_options = {
 		# 'encoding': "UTF-8",
-		'print-media-type': '',
-		'disable-smart-shrinking': '',
-		'page-size': 'A4',
-		'quiet': '',
-		'zoom': '0.6',
+		# 'print-media-type': '',
+		# 'disable-smart-shrinking': '',
+		# 'page-size': 'A4',
+		# 'quiet': '',
+		# 'zoom': '0.6',
 	}
 	memory_file = None
 	error = None
@@ -120,6 +134,11 @@ class PDF(object):
 				self.memory_file = pdfkit.from_string(html, output, **kwargs)
 			else:
 				pdfkit.from_string(html, output, **kwargs)
+
+
+# class PDF(Wkhtml):
+class PDF(WeasyPrint):
+	pass
 
 
 class AESCipher(object):
