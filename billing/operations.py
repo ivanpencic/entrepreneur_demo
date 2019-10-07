@@ -92,7 +92,7 @@ class WeasyPrint(object):
 	def __init__(self, html, output, print_options=None):
 		obj = HTML(base_url=settings.BASE_DIR, string=html)
 		if output:
-			obj.write_pdf(output, zoom=0.6)
+			obj.write_pdf(output)
 		else:
 			self.memory_file = obj.write_pdf()
 
