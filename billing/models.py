@@ -756,7 +756,7 @@ class Invoice(models.Model):
 		gv_name = 'Invoices'
 
 		rows = []
-		all_ivoices = InvoiceItem.objects.all()
+		all_ivoices = InvoiceItem.objects.all().order_by('-invoice__year', '-invoice__number')
 		x = []
 		for item in all_ivoices:
 			if item.invoice.id in x:
