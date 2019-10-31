@@ -85,6 +85,11 @@ urlpatterns = [
 		name='kpo'
 	),
 	path(
+		r'db/',
+		views.download_db,
+		name='db'
+	),
+	path(
 		r'logout/',
 		views.logout_user,
 		name='logout'

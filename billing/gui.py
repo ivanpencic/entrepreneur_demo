@@ -84,6 +84,9 @@ def get_content_links(request):
 			style='font-size:48px'></i>", reverse("customers"), a_link],
 		["KPO<br><br><i class='fas fa-file-excel' \
 			style='font-size:48px'></i>", reverse("kpo"), a_link],
+		["DB<br><br><i class='fas fa-angle-double-down' \
+			style='font-size:48px'></i>", reverse("db"), a_link],
+			
 	]
 
 	return format_base_links(links)

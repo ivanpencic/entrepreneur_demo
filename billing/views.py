@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template.loader import render_to_string, get_template
@@ -146,6 +147,13 @@ def view_invoice(request, invoice_id):
 	)
 	return render(request, invoice_data['template'], context)
 
+
+@login_required(login_url='/login/')
+def download_db(request):
+	response = HttpResponse(open(settings.DATABASES['default']['NAME'], 'rb'), content_type='application/octet-stream')
+	response['Content-Disposition'] = \
+		'attachment; filename="%s"' % os.path.basename(settings.DATABASES['default']['NAME'])
+	return response
 
 @login_required(login_url='/login/')
 def download_invoice(request, invoice_id):
