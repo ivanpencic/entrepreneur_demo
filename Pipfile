@@ -16,7 +16,7 @@ gunicorn = "*"
 xlsxwriter = "*"
 wkhtmltopdf = "*"
 cffi = "==1.11.5"
-mysqlclient = "*"
+mysqlclient = "==1.4.2.post1"
 weasyprint = "*"
 
 [requires]
