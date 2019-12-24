@@ -21,7 +21,7 @@
 
 
 
-<div class='text-center'>
+<div class='text-center' style="overflow-x: scroll;">
 	<table id="{{grid_data.name}}"></table>
 
 	<script type="text/javascript">
@@ -39,7 +39,8 @@
 
 		var headers = [
 			{% for head in grid_data.headers %}
-				{ label: '{{head}}', name: '{{forloop.counter0}}', width: 75},
+				{ label: '{{head}}', name: '{{forloop.counter0}}'},
+				// { label: '{{head}}', name: '{{forloop.counter0}}', width: 75},
 			{% endfor %}
 		 ]
 
@@ -48,19 +49,20 @@
 				datatype: "local",
 				data: mydata,
 				height: 250,
-				<!-- width: 780, -->
-				autowidth: true,
+				width: 915,
+				// autowidth: true,
 				colModel: headers,
 				viewrecords: true, // show the current page, data rang and total records on the toolbar
 				caption: "{{grid_data.name}}",
 			});
 		});
 
-		$(window).on("resize", function () {
-			var $grid = $("#{{grid_data.name}}"),
-				newWidth = $grid.closest(".ui-jqgrid").parent().width();
-			$grid.jqGrid("setGridWidth", newWidth, true);
-		});
+		// $(window).on("resize", function () {
+		// 	var $grid = $("#{{grid_data.name}}"),
+		// 		newWidth = $grid.closest(".ui-jqgrid").parent().width();
+		// 	$grid.jqGrid("setGridWidth", newWidth, true);
+
+		// });
 
 
 	</script>
