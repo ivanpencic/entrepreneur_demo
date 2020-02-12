@@ -182,8 +182,9 @@ def download_kpo(request, year):
 	xls_data = models.Invoice.get_kpo_for_year(year)
 
 	kpo = xls.make_kpo(xls_data)
-	response = HttpResponse(kpo, content_type='application/vnd.openxmlformats-\
-		officedocument.spreadsheetml.sheet')
+	response = HttpResponse(kpo, content_type=\
+		'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+	)
 	response['Content-Disposition'] = \
 		'attachment; filename="%s"' % xls_data['file_name']
 	return response
