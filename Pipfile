@@ -7,7 +7,7 @@ name = "pypi"
 
 [packages]
 pdfkit = "*"
-django = "==2.2.8"
+django = "==2.2.18"
 crypto = "*"
 cryptography = "*"
 pycrypto = "*"
